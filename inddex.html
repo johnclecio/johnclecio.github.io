@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="https://i.ibb.co/RcjDJ08/do-utilizador.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Libs externas -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+
+  <link rel="stylesheet" href="/src/css/style.css">
+  <title>I´M JOHN</title>
+</head>
+
+<body>
+
+  <iframe id="scPlayer" width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2148343031&color=%23000000&auto_play=true">
+  </iframe>
+
+  <div class="hora-barra" id="horaAtual">00:00:00</div>
+
+  <button id="nextBtn">⏭️ Próxima</button>
+
+  <div class="page">
+    <div class="title">📈 Bitcoin (BTC/USDT)</div>
+    <div id="btc-price" class="price">Carregando preço...</div>
+    <div id="chart" class="chart-box"></div>
+  </div>
+
+  <h1>Contagem regressiva</h1>
+
+  <div class="container">
+    <h1>Contagem regressiva até 29/04/2027 às 08:00</h1>
+    <ul>
+      <li><span id="days"></span> Days</li>
+      <li><span id="hours"></span> Hours</li>
+      <li><span id="minutes"></span> Minutes</li>
+      <li><span id="seconds"></span> Seconds</li>
+    </ul>
+  </div>
+
+  <!-- Botões -->
+  <button onclick="mostrarPagina(1)">HOME</button>
+  <button onclick="mostrarPagina(2)">FOTOS</button>
+  <button onclick="mostrarPagina(3)">VIDEOS</button>
+  <button onclick="mostrarPagina(4)">TOMORROWLAND</button>
+
+  <!-- Páginas -->
+  <div id="pagina1" class="pagina ativa">...</div>
+  <div id="pagina2" class="pagina">...</div>
+  <div id="pagina3" class="pagina">...</div>
+  <div id="pagina4" class="pagina">...</div>
+
+  <footer>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/johnmaclima/" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/johnclecio" target="_blank">💻 GitHub</a>
+    </div>
+    <p>Copyright © 2025 - John Lima</p>
+  </footer>
+
+  <!-- JS DO PROJETO -->
+  <script src="/src/js/script.js"></script>
+  
+</body>
+</html>

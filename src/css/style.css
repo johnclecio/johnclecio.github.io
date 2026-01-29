@@ -1,0 +1,326 @@
+.pagina {
+      display: none; /* todas começam escondidas */
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+      border-radius: 80px ;
+      background: var(--bg);
+    }
+    .ativa {
+      display: block; /* só aparece a que está ativa */
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #007BFF;
+      color: white;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+     :root {
+      --bg: #121212;
+      --fg: #f1f1f1;
+      --brand: #00adb5;
+      --muted: #9aa0a6;
+    }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+    body { background: var(--bg); color: var(--fg); text-align: center; }
+
+    header { padding: 30px 20px; }
+    header h1 { font-size: 2.4rem; color: var(--brand); }
+    img.perfil {
+      width: 200px; height: 200px; border-radius: 50%;
+      margin: 20px auto; border: 4px solid var(--brand); object-fit: cover;
+    }
+
+    /* --- SLIDER MANUAL (sem autoplay) --- */
+    .slider {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      aspect-ratio: 6 / 10;         /* altura responsiva */
+      margin: 28px auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 18px rgba(0,0,0,.5);
+      background: #000;
+    }
+
+    /* Radios (controle) */
+    .slider input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+
+    /* Área de slides: todos empilhados no mesmo lugar */
+    .slides {
+      position: relative;
+      width: 100%; height: 100%;
+    }
+    .slide {
+      position: absolute; inset: 0;
+      opacity: 0; pointer-events: none;
+      transition: opacity .25s ease;   /* só um fade suave; remova se não quiser */
+    }
+    .slide img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+    }
+
+    /* Exibe APENAS o slide correspondente ao radio checado */
+    #s1:checked ~ .slides .slide:nth-child(1),
+    #s2:checked ~ .slides .slide:nth-child(2),
+    #s3:checked ~ .slides .slide:nth-child(3),
+    #s4:checked ~ .slides .slide:nth-child(4){
+      opacity: 1; pointer-events: auto;
+    }
+
+    /* Bolinhas (navegação) */
+    .dots {
+      position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+      display: flex; gap: 10px; z-index: 5;
+    }
+    .dots label {
+      width: 12px;
+      height: 12px; 
+      border: 2px solid #fff;
+      border-radius: 50%;
+      cursor: pointer; 
+      transition: transform .2s ease;
+      background-color: .2s ease;
+      border-color: .2s ease;
+      display: inline-block;
+      background: transparent;
+    }
+
+     /* Estado ativo da bolinha */
+    #s1:checked ~ .dots label[for="s1"],
+    #s2:checked ~ .dots label[for="s2"],
+    #s3:checked ~ .dots label[for="s3"],
+    #s4:checked ~ .dots label[for="s4"]{
+      background: var(--brand);
+      border-color: var(--brand);
+      transform: scale(1.15);
+    }
+    .dots label:hover { transform: scale(1.1); }
+
+    /* Setas */
+    .arrows > div { display: none; }
+    .arrows {
+      position: absolute; inset: 0;
+      display: grid; place-items: center; pointer-events: none; z-index: 6;
+    }
+    .arrows .group { width: 100%; height: 100%; position: absolute; inset: 0; }
+    .arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(0,0,0,.45);
+      color: #fff; font-size: 26px; line-height: 44px;
+      cursor: pointer; user-select: none; pointer-events: auto;
+      border: 1px solid rgba(255,255,255,.25);
+    }
+    .arrow:hover { background: rgba(0,0,0,.7); }
+    .arrow.prev { left: 10px; }
+    .arrow.next { right: 10px; }
+
+    /* Mostra o grupo de setas correspondente ao slide ativo */
+    #s1:checked ~ .arrows .a1,
+    #s2:checked ~ .arrows .a2,
+    #s3:checked ~ .arrows .a3,
+    #s4:checked ~ .arrows .a4{ display: block; }
+
+    footer {
+      margin-block: 50px; padding: 20px; background: #000; border-radius: 80px;;
+    }
+    footer .social a {
+      margin: 0 10px; display: inline-block; color: var(--fg); text-decoration: none;
+      transition: transform .2s, color .2s;
+    }
+    footer .social a:hover { transform: scale(1.1); color: var(--brand); }
+    footer p { margin-top: 12px; color: var(--muted); font-size: .92rem; }
+    
+    
+     #nextBtn {
+    display: block;
+    margin: 20px auto 50px auto; /* centralizado, 20px top e 50px bottom */
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff5500, #ff9900);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  #nextBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  }
+
+  #nextBtn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  main{
+            display:block;
+            width:100%;
+            
+            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius:80px;
+             
+            padding:20px;
+            box-shadow:0 10px 30px rgba(2,6,23,0.6);
+            }
+
+
+            .profile, .bio, .footer{display:block;margin-bottom:20px;}
+            
+            h1, h2{margin:0 0 10px 0}
+            p, .chips, .skills{display:block;margin-bottom:8px}
+
+
+            .chips .chip, .skills .skill{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px;color:var(--muted);margin:4px 4px 4px 0}
+
+
+            .footer{padding:12px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02)}
+
+
+            @media (max-width:480px){body{padding:12px} h1{font-size:18px}  .chip,.skill{font-size:12px;padding:6px 10px}
+    		 header h1 { font-size: 2rem; }
+            .v1 {width:310px; height:220px ;     }
+    		 .container h1 {
+    font-size: 1.4rem;
+  }
+
+  .container span {
+    font-size: 1.8rem;
+  }
+
+  .container ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container ul li {
+    width: 80%;
+  }
+      
+}
+    
+    
+    
+    .container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.container ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 20px 0 0 0;
+  list-style: none;
+}
+
+.container ul li {
+  flex: 1 1 100px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.container ul li:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.container span {
+  display: block;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #ffeb3b;
+}
+    .hora-barra {
+      width: 100%;
+      background: linear-gradient(90deg, #0077ff, #00c4ff);
+      color: #fff;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    
+   .page {
+      background: #111;
+      color: black;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .title {
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .price {
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #0f0;
+      text-align: center;
+    }
+
+    .chart-box {
+      width: 100%;
+      max-width: 900px;
+      height: 450px;
+      background: #1e1e1e;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+ 
+/* Tablet */
+@media (max-width: 768px) {
+  .chart-box {
+    max-width: 350px;
+    max-height: 50px;
+  }
+}
+
+
+
+/* Responsividade só do contador */
+/*@media (max-width: 600px) {}*/
