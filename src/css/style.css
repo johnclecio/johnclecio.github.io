@@ -1,3 +1,9 @@
+:root {
+  --bg: #121212;
+  --fg: #f1f1f1;
+}
+
+
 .pagina {
       display: none; /* todas começam escondidas */
       padding: 20px;
@@ -7,8 +13,34 @@
       background: var(--bg);
     }
     .ativa {
-      display: block; /* só aparece a que está ativa */
+      display: block; 
+       /* só aparece a que está ativa */
     }
+  .nome{
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--brand);
+}
+
+    .info{
+    font-size: 18px;
+    color: var(--muted);
+}
+
+.descricao{
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: justify;
+}
+img{
+  width: auto;
+  border: solid 1px #0056b3;
+  border-radius: 50%;
+}
     button {
       margin: 5px;
       padding: 8px 12px;
