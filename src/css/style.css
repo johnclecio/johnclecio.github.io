@@ -37,10 +37,11 @@
     text-align: justify;
 }
 img{
-  max-width: 100%;
-  height: auto;
-  border: solid 1px #0056b3;
+  width: 150px;      /* tamanho fixo ou use % */
+  height: 150px;
+  object-fit: cover; /* evita deformar */
   border-radius: 50%;
+  border: solid 1px #0056b3;
 }
     button {
       margin: 5px;
