@@ -34,10 +34,14 @@
 .descricao{
     font-size: 17px;
     line-height: 1.8;
-    max-width: 80%;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: justify;
+
+    text-justify: inter-word;
+    hyphens: auto;
+    word-break: normal;
 }
 #johnimg{
   width: 150px;      /* tamanho fixo ou use % */
@@ -380,11 +384,22 @@
     }
 
  
-/* Tablet */
 @media (max-width: 768px) {
+  .descricao{
+   max-width: 100%;
+    padding: 0 14px;
+    line-height: 1.6;
+
+    /* mantém justify sem “buracos” */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
   .chart-box {
     max-width: 350px;
     height: 280px;
+    margin: 0 auto;
   }
 }
 
