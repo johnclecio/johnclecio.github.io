@@ -17,13 +17,13 @@
 
    <!-- Botões -->
   <button onclick="mostrarPagina(1)">HOME</button>
-  <button onclick="mostrarPagina(2)">FOTOS</button>
-  <button onclick="mostrarPagina(3)">VIDEOS</button>
+  <button onclick="mostrarPagina(2)" href="pagina2">FOTOS</button>
+  <button onclick="mostrarPagina(3)" href="pagina3">BITCOIN</button>
   <button onclick="mostrarPagina(4)">TOMORROWLAND</button>
 
   <!-- Páginas -->
   <div id="pagina1" class="pagina ativa">
-    <img src="https://avatars.githubusercontent.com/u/81537571?s=400&u=7293c85ddc7567c34a321f9026a28b072119a11a&v=4" alt="Imagem-de-john">
+    <img id="johnimg" src="https://avatars.githubusercontent.com/u/81537571?s=400&u=7293c85ddc7567c34a321f9026a28b072119a11a&v=4" alt="Imagem-de-john">
     <h1 class="nome">John Lima</h1>
     <p class="info">32 anos • Estudante de Engenharia de Software 
      • Foco em Desenvolvimento Java</p>
@@ -62,36 +62,115 @@
 
   </div>
 
-  <iframe id="scPlayer" width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay"
+  
+
+  
+ 
+  <div id="pagina2" class="pagina">
+      <div class="slider">
+
+  <!-- Radios de controle -->
+  <input type="radio" name="slider" id="s1" checked>
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3">
+  <input type="radio" name="slider" id="s4">
+
+  <!-- Slides -->
+  <div class="slides">
+    <div class="slide">
+      <img src="src/img/3d.jpeg" alt="Foto 1">
+      <div class="texto-slide">
+        <h4>Tomorrowland Brasil 2025</h4>
+        <p class="legenda">
+          Minha primeira vez no Tomorrowland Brasil 2025.
+          Mais que um festival, uma experiência surreal
+          que vai ficar pra sempre na memória.
+          </p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="src/img/ultimodia.jpg" alt="Foto 2">
+    </div>
+    <div class="slide">
+      <img src="src/img/coffee.png" alt="Foto 3">
+    </div>
+    <div class="slide">
+      <img src="src/img/pac_1.JPG" alt="Foto 4">
+    </div>
+  </div>
+
+  <!-- Bolinhas -->
+  <div class="dots">
+    <label for="s1"></label>
+    <label for="s2"></label>
+    <label for="s3"></label>
+    <label for="s4"></label>
+  </div>
+
+  <!-- Setas -->
+  <div class="arrows">
+    <!-- Slide 1 -->
+    <div class="group a1">
+      <label for="s4" class="arrow prev">&#10094;</label>
+      <label for="s2" class="arrow next">&#10095;</label>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="group a2">
+      <label for="s1" class="arrow prev">&#10094;</label>
+      <label for="s3" class="arrow next">&#10095;</label>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="group a3">
+      <label for="s2" class="arrow prev">&#10094;</label>
+      <label for="s4" class="arrow next">&#10095;</label>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="group a4">
+      <label for="s3" class="arrow prev">&#10094;</label>
+      <label for="s1" class="arrow next">&#10095;</label>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+    
+  </div>
+  <div id="pagina3" class="pagina">
+  
+  <div class="page">
+    <div class="title">📈 Bitcoin (BTC/USDT)</div>
+    <div id="btc-price" class="price">Carregando preço...</div>
+    <div id="chart" class="chart-box"></div>
+  </div>  
+  </div>
+
+  <div id="pagina4" class="pagina">
+    <h1>Tomorrowland  Brasil 2027</h1>
+
+    <div class="container">
+      <h1>Contagem regressiva até 29/04/2027 às 08:00</h1>
+      <ul>
+        <li><span id="days"></span> Days</li>
+        <li><span id="hours"></span> Hours</li>
+        <li><span id="minutes"></span> Minutes</li>
+        <li><span id="seconds"></span> Seconds</li>
+      </ul>
+    </div>
+
+    </div>
+   <iframe id="scPlayer" width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay"
     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2148343031&color=%23000000&auto_play=true">
   </iframe>
 
   <div class="hora-barra" id="horaAtual">00:00:00</div>
 
   <button id="nextBtn">⏭️ Próxima</button>
-
-  <div class="page">
-    <div class="title">📈 Bitcoin (BTC/USDT)</div>
-    <div id="btc-price" class="price">Carregando preço...</div>
-    <div id="chart" class="chart-box"></div>
-  </div>
-
-  <h1>Contagem regressiva</h1>
-
-  <div class="container">
-    <h1>Contagem regressiva até 29/04/2027 às 08:00</h1>
-    <ul>
-      <li><span id="days"></span> Days</li>
-      <li><span id="hours"></span> Hours</li>
-      <li><span id="minutes"></span> Minutes</li>
-      <li><span id="seconds"></span> Seconds</li>
-    </ul>
-  </div>
-
- 
-  <div id="pagina2" class="pagina">...</div>
-  <div id="pagina3" class="pagina">...</div>
-  <div id="pagina4" class="pagina">...</div>
 
   <footer>
     <div class="social">
