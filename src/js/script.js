@@ -1,3 +1,14 @@
+const texto = document.querySelector(".descricao");
+
+texto.addEventListener("mouseover", function() {
+  texto.style.transform = "scale(1.05)";
+  texto.style.transition = "0.3s";
+});
+
+texto.addEventListener("mouseout", function() {
+  texto.style.transform = "scale(1)";
+});
+
 /* ===============================
    RELÓGIO DIGITAL
 ================================ */
@@ -101,15 +112,4 @@ setInterval(() => {
     Math.floor((diff % minute) / second);
 }, second);
 
-/* ===============================
-   NAVEGAÇÃO DE PÁGINAS
-================================ */
-function mostrarPagina(num) {
-  document
-    .querySelectorAll(".pagina")
-    .forEach(p => p.classList.remove("ativa"));
 
-  document
-    .getElementById("pagina" + num)
-    .classList.add("ativa");
-}
