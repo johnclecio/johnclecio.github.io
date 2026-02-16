@@ -410,9 +410,57 @@ footer p {
   margin-bottom: 30px;
 
 }
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column; /* empilha os itens do header */
+    align-items: center;    /* centraliza horizontalmente */
+    gap: 15px;              /* espaço entre H1 e nav */
+    padding: 10px 20px;
+  }
 
+  header nav ul {
+    display: flex;
+    flex-direction: column; /* empilha os links */
+    gap: 10px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  .conteudo {
+    flex-direction: column;  /* empilha texto e imagem */
+    gap: 20px;               /* espaço entre eles */
+  }
 
+  .conteudo img {
+    width: 70%;              /* ajusta a imagem para caber na tela */
+    max-width: 300px;        /* mantém limite */
+  }
+  .curso{
+    margin-block: 50px;
+    font-size: 1.5rem;
+  }
+  .info{
+    text-align: center;
+    width: 90%;
+  }
+  .regressiva ul {
+    display: flex;
+    flex-direction: column; /* empilha os blocos */
+    gap: 15px;              /* espaço entre os itens */
+    margin-bottom: 50px;    /* não exagera no espaçamento */
+    padding: 0;
+    align-items: center;    /* centraliza os blocos */
+  }
 
+  .regressiva ul li {
+    min-width: 120px;        /* largura dos blocos menor que desktop */
+  }
+
+  #fotos{
+    margin-top: 300px;
+  }
+}
 
 
 
