@@ -6,183 +6,277 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Libs externas -->
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script src="https://w.soundcloud.com/player/api.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  <link rel="stylesheet" href="/src/css/style.css">
-  <meta http-equiv="refresh" content="6">
+ <script src="src/js/app.js" defer></script>
+
+  
+  
 
   <title>I´M JOHN</title>
 </head>
 
 <body>
-
-  <!--Header com navegação
-  <header class="container">
-        <h1>JOHN LIMA</h1>
-        <nav>
-          <ul>
-            <li><a href="#sobre">SOBRE</a></li>
-            <li><a href="#bitcoin">BITCOIN</a></li>
-            <li><a href="#tml">TOMORROWLAND</a></li>
-            <li><a href="#fotos">FOTOS</a></li>
-            
-          </ul>
-          
-        </nav>
-  </header>
--->
-  <section class="conteudo">
-    <video autoplay muted>
-      <source src="src/video/manutencao.mp4" type="video/mp4">  
-    </video>
-  </section>
-<!--
-  <main>
-    <div class="conteudo">
-      <p class="curso">Engenharia de Software</p>
-      <img src="/src/img/John.png" alt="Imagem-de-John">
-    </div>
-    <div class="hora-barra" id="horaAtual">00:00:00</div>
-      <div id="sobre">
-      <span class="info">32 anos • Estudante de Engenharia de Software 
-     • Foco em Desenvolvimento Java</span>
-
-    <p class="descricao">
-      Sou estudante de Engenharia de Software com uma forte paixão por tecnologia e desenvolvimento
-      de sistemas. Tenho direcionado minha carreira para o desenvolvimento back-end utilizando Java,
-      buscando criar aplicações seguras, eficientes e escaláveis.
-      Minha jornada na área de tecnologia é guiada pelo aprendizado contínuo e pela vontade de evoluir
-      todos os dias. Dedico meu tempo ao estudo de boas práticas de programação, orientação a objetos,
-      estrutura de dados e arquitetura de software, sempre com o objetivo de escrever códigos limpos,
-      organizados e de fácil manutenção.
-      Possuo conhecimentos em APIs REST, bancos de dados relacionais e não relacionais, controle de
-      versão com Git e metodologias modernas de desenvolvimento. Além disso, estou constantemente
-      desenvolvendo projetos próprios para fortalecer minhas habilidades e transformar teoria em prática.
-      Sou uma pessoa disciplinada, curiosa e motivada por desafios. Acredito que a tecnologia tem o
-      poder de transformar realidades, e quero fazer parte dessa transformação criando soluções que
-      gerem impacto positivo.
-      Atualmente, busco uma oportunidade de estágio ou posição júnior onde eu possa contribuir com
-      minhas habilidades, aprender com profissionais experientes e crescer dentro de um ambiente
-      colaborativo e inovador.
-    </p>
-    </div>
-
-  
-    <div id="bitcoin" class="page">
-      <div class="title">📈 Bitcoin (BTC/USDT)</div>
-      <div id="btc-price" class="price">Carregando preço...</div>
-      <div id="chart" class="chart-box"></div>
-    </div>  
-  
    
-
-  <div id="tml" class="regressiva">
-    <h2>Tomorrowland Brasil 2027</h2>
-
-    <div>
-      <p class="tmlregressiva">Contagem regressiva até 29/04/2027 às 08:00</p>
-      <ul>
-        <li><span id="days"></span> Days</li>
-        <li><span id="hours"></span> Hours</li>
-        <li><span id="minutes"></span> Minutes</li>
-        <li><span id="seconds"></span> Seconds</li>
-      </ul>
-    </div>
-
-    </div>
-
-    <div id="fotos">
-      <div class="slider">
-
+  <header class="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-900 flex items-center justify-center min-h-screen">
  
-  <input type="radio" name="slider" id="s1" checked>
-  <input type="radio" name="slider" id="s2">
-  <input type="radio" name="slider" id="s3">
-  <input type="radio" name="slider" id="s4">
+    <div class="bg-sky-950 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5 flex flex-col md:flex-row items-center gap-10 max-w-4xl w-full">
+      
+      <nav class="border rounded-full px-4 py-3 bg-sky-950 shadow-lg shadow-cyan-500/50 w-full md:w-auto md:h-64">
+        <ul class="flex flex-row md:flex-col justify-evenly items-center gap-6 md:h-full">
+          <li><a href="#home" onclick="selecaoMenu('home')" class="hover:text-indigo-600 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+              <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+            </svg>
+          </a></li>
+          <li><a href="#sobre" onclick="selecaoMenu('sobre')" class="hover:text-indigo-600 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg> 
+          </a></li>
+          <li><a href="#projetos" onclick="selecaoMenu('projetos')" class="hover:text-lime-100 cursor-pointer transition-colors duration-150">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+              <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+              <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1z"/>
+            </svg>
+          </a></li>
+          <li><a href="#myskills" onclick="selecaoMenu('myskills')" class="hover:text-lime-100 cursor-pointer transition-colors duration-150">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+              <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z"/>
+              <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
+            </svg>
+          </a></li>
+          <li><a href="#contato" onclick="selecaoMenu('contato')" class="hover:text-lime-100 cursor-pointer transition-colors duration-150">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+            </svg>
+          </a></li>
+        </ul>
+        
+      </nav>
+         <section id="home"
+              class="flex flex-col items-center justify-center text-center
+            w-full md:w-[600px] h-[400px] gap-3 mx-auto">
 
-  <div class="slides">
-    <div class="slide">
-      <img src="src/img/3d.jpeg" alt="Foto 1">
-      <div class="texto-slide">
-        <h4>Tomorrowland Brasil 2025</h4>
-        <p class="legenda">
-          Minha primeira vez no Tomorrowland Brasil 2025.
-          Mais que um festival, uma experiência surreal
-          que vai ficar pra sempre na memória.
-          </p>
-      </div>
-    </div>
-    <div class="slide">
-      <img src="src/img/ultimodia.jpg" alt="Foto 2">
-    </div>
-    <div class="slide">
-      <img src="src/img/coffee.png" alt="Foto 3">
-    </div>
-    <div class="slide">
-      <img src="src/img/pac_1.JPG" alt="Foto 4">
-    </div>
-  </div>
+              <img 
+              class="rounded-full shadow-lg shadow-cyan-500/50 w-32 border-4 border-cyan-400"
+              src="src/img/John.png"
+              alt="imagem-perfil-john">
 
- 
-  <div class="dots">
-    <label for="s1"></label>
-    <label for="s2"></label>
-    <label for="s3"></label>
-    <label for="s4"></label>
-  </div>
+              <h2 class="text-3xl text-white font-bold">
+                HI, I'M <span class="text-cyan-400">JOHN</span>
+              </h2>
+
+              <span class="text-slate-300 text-sm">
+                32 anos • Estudante de Engenharia de Software • Foco em Desenvolvimento Java
+              </span>
+
+              <p class="text-slate-400 leading-relaxed max-w-lg mt-15 text-justify">
+                Tenho uma forte paixão por tecnologia e desenvolvimento de sistemas.
+                Estou direcionando minha carreira para o desenvolvimento back-end com Java,
+                criando aplicações seguras, eficientes e escaláveis.
+              </p>
+
+            </section>
+                <section id="sobre" class="hidden flex flex-col items-center justify-start text-center
+                        w-full max-w-[600px] h-[400px] gap-6 text-slate-200 leading-relaxed overflow-y-auto mx-auto px-4">
+
+                   <h2 class="text-2xl font-bold text-cyan-400 pb-4 flex-shrink-0">Sobre mim</h2>
+
+                  <div class="flex flex-col gap-4">
+                    <p class="text-base text-justify">
+                      Minha jornada na área de tecnologia é guiada pelo aprendizado contínuo e pela vontade
+                      de evoluir todos os dias. Dedico meu tempo ao estudo de boas práticas de programação,
+                      orientação a objetos, estrutura de dados e arquitetura de software, sempre com o
+                      objetivo de escrever códigos limpos, organizados e de fácil manutenção.
+                    </p>
+
+                    <p class="text-base text-justify">
+                      Possuo conhecimentos em APIs REST, bancos de dados relacionais e não relacionais,
+                      controle de versão com Git e metodologias modernas de desenvolvimento.
+                      Estou constantemente desenvolvendo projetos próprios para fortalecer minhas
+                      habilidades e transformar teoria em prática.
+                    </p>
+
+                    <p class="text-base text-justify">
+                      Atualmente busco uma oportunidade de estágio ou posição júnior onde eu possa
+                      contribuir com minhas habilidades e crescer dentro de um ambiente colaborativo
+                      e inovador.
+                    </p>
+                  </div>
+
+              </section>
+            <section id="projetos" class="hidden text-white flex flex-col items-center justify-center text-center
+            w-full md:w-[600px] h-[400px] gap-3 mx-auto">
+
+                  <h2 class="text-2xl font-bold mb-6 text-center">
+                    Meus Projetos
+                  </h2>
+
+                  <!-- Container do slider -->
+                  <div class="relative overflow-hidden w-full">
+
+                    <div id="slides" class="flex transition-transform duration-500">
+
+                      <!-- Slide 1 -->
+                      <div class="min-w-full p-4 bg-slate-900 rounded-lg shadow">
+                        <a href="https://github.com/johnclecio/ProjetoReact" target="_blank" class="text-cyan-400 font-bold text-lg">
+                          Projeto React
+                        </a>
+                        <p class="mt-2 text-slate-400 py-8">
+                          Este é meu projeto de portfólio desenvolvido com React e Tailwind CSS,
+                          criado para apresentar meus projetos, habilidades e formas de contato como desenvolvedor.
+                        </p>
+                      </div>
+
+                      <!-- Slide 2 -->
+                      <div class="min-w-full p-4 bg-slate-900 rounded-lg shadow">
+                        <a href="https://github.com/johnclecio/listaDeTarefa" target="_blank" class="text-cyan-400 font-bold text-lg">
+                          Lista De Tarefa
+                        </a>
+                        <p class="mt-2 text-slate-400 py-8">
+                          Repositório dedicado ao registro e organização das minhas atividades práticas.
+                        </p>
+                      </div>
+
+                      <!-- Slide 3 -->
+                      <div class="min-w-full p-4 bg-slate-900 rounded-lg shadow">
+                        <a href="https://github.com/johnclecio/demo-dao-jdbc" target="_blank" class="text-cyan-400 font-bold text-lg">
+                          JDBC DAO Project
+                        </a>
+                        <p class="mt-2 text-slate-400 py-8">
+                          Projetos e exercícios utilizando Sass, Bootstrap, Tailwind CSS, HTML, CSS e JavaScript.
+                        </p>
+                      </div>
+
+                    </div>
+
+                    <!-- Botões -->
+                    <button id="prev" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-slate-700/50 p-2 rounded-full text-white z-10">
+                      ◀
+                    </button>
+                    <button id="next" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-slate-700/50 p-2 rounded-full text-white z-10">
+                      ▶
+                    </button>
+
+                  </div>
+            </section>
+
+
+
+
+              <section id="myskills" class="hidden text-white w-full max-w-[900px] mx-auto px-4 overflow-auto min-h-[400px] h-auto md:h-[400px]">
+
+                    <h2 class="text-2xl font-bold mb-6 text-center">
+                      My Skills
+                    </h2>
+
+                    <!-- Container flexível -->
+                    <div class="flex flex-col lg:flex-row lg:items-center gap-6 h-full">
+
+                      <!-- Imagem do robô -->
+                     <img src="src/img/robotica.png" class="w-48 lg:w-64 h-auto object-contain">
+
+                      <!-- Barras de progresso -->
+                      <div class="flex-1 flex flex-col justify-center space-y-4">
+
+                        <!-- TypeScript -->
+                        <div>
+                          <div class="flex justify-between mb-1">
+                            <span>TypeScript</span>
+                            <span>7.0%</span>
+                          </div>
+                          <div class="w-full bg-slate-700 h-4 rounded">
+                            <div class="bg-blue-400 h-4 rounded" style="width: 7%;"></div>
+                          </div>
+                        </div>
+
+                        <!-- HTML -->
+                        <div>
+                          <div class="flex justify-between mb-1">
+                            <span>HTML</span>
+                            <span>18.4%</span>
+                          </div>
+                          <div class="w-full bg-slate-700 h-4 rounded">
+                            <div class="bg-cyan-400 h-4 rounded" style="width: 18.4%;"></div>
+                          </div>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div>
+                          <div class="flex justify-between mb-1">
+                            <span>JavaScript</span>
+                            <span>3.7%</span>
+                          </div>
+                          <div class="w-full bg-slate-700 h-4 rounded">
+                            <div class="bg-yellow-400 h-4 rounded" style="width: 3.7%;"></div>
+                          </div>
+                        </div>
+
+                        <!-- CSS -->
+                        <div>
+                          <div class="flex justify-between mb-1">
+                            <span>CSS</span>
+                            <span>31.2%</span>
+                          </div>
+                          <div class="w-full bg-slate-700 h-4 rounded">
+                            <div class="bg-blue-500 h-4 rounded" style="width: 31.2%;"></div>
+                          </div>
+                        </div>
+
+                        <!-- Java -->
+                        <div>
+                          <div class="flex justify-between mb-1">
+                            <span>Java</span>
+                            <span>11.9%</span>
+                          </div>
+                          <div class="w-full bg-slate-700 h-4 rounded">
+                            <div class="bg-red-500 h-4 rounded" style="width: 11.9%;"></div>
+                          </div>
+                        </div>              
+
+                      </div>
+                    </div>
+                </section>
+
+                <section id="contato" class="hidden text-white w-full max-w-[900px] mx-auto px-2 min-h-[400px] h-auto md:h-[400px] flex flex-col items-center justify-center gap-8">
+
+                    <!-- Lista de links -->
+                    <ul class="flex gap-6">
+                      <li class="flex items-center gap-2">
+                        <img src="src/img/github.svg" class="w-6 h-6" alt="GitHub">
+                        <a href="https://github.com/johnclecio" target="_blank" class="hover:text-cyan-400 transition-colors">GitHub</a>
+                      </li>
+                      <li class="flex items-center gap-2">
+                        <img src="src/img/linkedin.svg" class="w-6 h-6" alt="LinkedIn">
+                        <a href="https://www.linkedin.com/in/johnclecio/" target="_blank" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
+                      </li>
+                    </ul>
+
+                    <!-- Footer centralizado -->
+                    <footer class="w-full">
+                      <p class="text-center text-white">&copy; Todos os direitos reservados 2026</p>
+                    </footer>
+
+              </section>
+       
+    </div>  
+    
+      
+
+  </header>
+  
 
   
-  <div class="arrows">
-    
-    <div class="group a1">
-      <label for="s4" class="arrow prev">&#10094;</label>
-      <label for="s2" class="arrow next">&#10095;</label>
-    </div>
 
-     
-    <div class="group a2">
-      <label for="s1" class="arrow prev">&#10094;</label>
-      <label for="s3" class="arrow next">&#10095;</label>
-    </div>
+ 
+  
 
-      
-    <div class="group a3">
-      <label for="s2" class="arrow prev">&#10094;</label>
-      <label for="s4" class="arrow next">&#10095;</label>
-    </div>
+ 
 
-    
-    <div class="group a4">
-      <label for="s3" class="arrow prev">&#10094;</label>
-      <label for="s1" class="arrow next">&#10095;</label>
-    </div>
-  </div>
-
-</div>
-
-<iframe id="scPlayer" width="100%" height="150" scrolling="no" frameborder="no" allow="no"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2148343031&color=%23000000&auto_play=true">
-  </iframe>
-
-
-  <button id="nextBtn">⏭️ Próxima</button>
-
-
-
-    
-  </main> 
-
-  <footer>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/johnmaclima/" target="_blank">🔗 LinkedIn</a>
-      <a href="https://github.com/johnclecio" target="_blank">💻 GitHub</a>
-    </div>
-    <p>Copyright © 2026 - John Lima</p>
-  </footer>
-
-   JS DO PROJETO
-  <script src="src/js/script.js"></script>
--->  
+  
+  
+ 
 </body>
 </html>
