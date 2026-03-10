@@ -1,6 +1,6 @@
 # 🚀 I´M JOHN — Página Pessoal Interativa
 
-![Preview do Projeto](src/img/John.png)
+![Preview do Projeto](src/img/preview.png)
 
 I´M JOHN é minha página pessoal desenvolvida com HTML, Tailwind CSS e JavaScript, criada para apresentar minha trajetória, habilidades e interesses de forma moderna e interativa.
 
