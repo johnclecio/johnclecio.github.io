@@ -1,121 +1,96 @@
 # 🚀 I´M JOHN — Página Pessoal Interativa
 
-Este é o meu projeto de página pessoal desenvolvido com **HTML, CSS e JavaScript**, com o objetivo de apresentar minha trajetória, habilidades e interesses de forma moderna e interativa.
+![Preview do Projeto](src/img/John.png)
 
-A aplicação reúne informações profissionais, mídia, gráficos em tempo real e recursos dinâmicos para proporcionar uma experiência completa ao usuário.
+I´M JOHN é minha página pessoal desenvolvida com HTML, Tailwind CSS e JavaScript, criada para apresentar minha trajetória, habilidades e interesses de forma moderna e interativa.
 
----
+O site reúne informações profissionais, mídia, gráficos em tempo real e recursos dinâmicos para proporcionar uma experiência completa ao usuário.
 
 ## 🧑‍💻 Sobre o Projeto
 
-O **I´M JOHN** é uma landing page pessoal que funciona como um portfólio digital.
-Nela, apresento quem sou, minha jornada na tecnologia e alguns recursos visuais que demonstram minhas habilidades com desenvolvimento web.
+Este projeto funciona como um portfólio digital.
+Apresento quem sou, minha jornada na tecnologia e alguns recursos visuais que demonstram minhas habilidades com desenvolvimento web.
 
-O projeto foi construído priorizando:
+Principais prioridades no desenvolvimento:
 
-* Código organizado
-* Interface moderna
-* Responsividade
-* Integração com APIs externas
-* Experiência do usuário
+Código organizado e limpo
 
----
+Interface moderna e responsiva
+
+Experiência do usuário otimizada
 
 ## ✨ Funcionalidades
+### ✅ Home
 
-✅ **Home**
+Apresentação pessoal
 
-* Apresentação pessoal
-* Descrição profissional
-* Links para LinkedIn e GitHub
+Descrição profissional
 
-✅ **Relógio Digital**
+Links para LinkedIn e GitHub
 
-* Atualização em tempo real diretamente no navegador.
+Prévia de habilidades com sliders e gráficos
 
-✅ **Player do SoundCloud**
+### ✅ Layout Responsivo
 
-* Playlist integrada com botão para avançar as músicas.
+Totalmente adaptado para desktop, tablet e mobile
 
-✅ **Gráfico do Bitcoin (BTC/USDT)**
+### ✅ Interatividade
 
-* Dados obtidos da API da Binance.
-* Atualização automática do preço.
-* Exibição em formato candlestick usando **ApexCharts**.
+Consumo de APIs externas
 
-✅ **Contagem Regressiva**
-
-* Timer dinâmico até uma data específica.
-
-✅ **Navegação por Páginas**
-
-* Alternância entre seções sem recarregar o site.
-
-✅ **Layout Responsivo**
-
-* Adaptado para desktop, tablet e mobile.
-
----
+Animações com JavaScript e Tailwind
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **HTML5** — Estrutura da aplicação
-* **CSS3** — Estilização e responsividade
-* **JavaScript (Vanilla)** — Interatividade e consumo de APIs
-* **ApexCharts** — Gráficos financeiros
-* **SoundCloud Widget API** — Player de música
-* **Binance API** — Dados do mercado de criptomoedas
+HTML5 — Estrutura da aplicação
 
----
+Tailwind CSS — Estilização e layout responsivo
 
-## 📂 Estrutura do Projeto
+JavaScript (Vanilla) — Interatividade, sliders e integração com APIs
 
-```
-📁 projeto
- ├── index.html
- ├── src
- │   ├── css
- │   │    └── style.css
- │   └── js
- │        └── script.js
-```
+    📂 Estrutura do Projeto
+    📁 projeto
+     ├── index.html
+     ├── src
+     │   ├── css
+     │   │    └── style.css
+     │   ├── js
+     │   │    └── script.js
+     │   └── img
+     │        └── preview.png
+    🎯 Objetivo
 
----
+Fortalecer habilidades em desenvolvimento web
 
+Criar interfaces modernas e interativas
 
-
-## 🎯 Objetivo
-
-Este projeto foi criado para fortalecer minhas habilidades em desenvolvimento web, principalmente na criação de interfaces modernas e integração com serviços externos.
-
-Além disso, ele representa minha evolução prática como estudante de Engenharia de Software e futuro desenvolvedor.
-
----
+Demonstrar evolução prática como estudante de Engenharia de Software
 
 ## 📌 Melhorias Futuras
 
-* Adicionar mais seções ao portfólio
-* Implementar modo claro/escuro
-* Melhorar animações
-* Otimizar performance
-* Publicar versão online
+Adicionar mais seções ao portfólio
 
----
+Implementar modo claro/escuro
+
+Melhorar animações e microinterações
+
+Otimizar performance
+
+Publicar versão online
 
 ## 👨‍🚀 Autor
 
-**John Lima**
-Estudante de Engenharia de Software com foco em desenvolvimento back-end Java, apaixonado por tecnologia e aprendizado contínuo.
+John Lima
 
-🔗 LinkedIn:
-[https://www.linkedin.com/in/johnmaclima/](https://www.linkedin.com/in/johnmaclima/)
+Estudante de Engenharia de Software,
 
-💻 GitHub:
-[https://github.com/johnclecio](https://github.com/johnclecio)
+apaixonado por tecnologia e aprendizado contínuo.
 
----
+🔗 LinkedIn
 
-## 📄 Licença
+💻 GitHub
+
+📄 Licença
 
 Este projeto está sob a licença MIT.
 Sinta-se livre para utilizar como inspiração ou base para seus próprios projetos.
