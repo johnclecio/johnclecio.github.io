@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>I'M JOHN</title>
+</head>
+<body>
+
+    <div class="floor-wrap" aria-hidden="true">
+        <div class="floor"></div>
+    </div>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <div class="layout">
+        <header class="header">
+            <div class="logo"><span>&lt;/&gt;</span> John Lima</div>
+
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="alternar tema">
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="menu" aria-expanded="false" aria-controls="navbar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <main class="page">
+
+            <!-- 01 · HERO -->
+            <section class="hero" id="inicio">
+                <div class="section-index"><span>01</span><i class="tick"></i></div>
+
+                <div class="status-badge">
+                    <span class="dot"></span>
+                    <span>Disponível para oportunidades</span>
+                </div>
+
+                <div class="main-content">
+                    <div class="hero-left">
+                        <h1>John Lima</h1>
+                        <span>Software Engineering Student</span>
+                        <p class="hero-stack">Desenvolvimento Web &nbsp;•&nbsp; Java &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Python</p>
+
+                        <div class="hero-cta">
+                            <a href="#projetos" class="btn btn-primary">Ver Projetos <span>&rarr;</span></a>
+                            <a href="https://github.com/johnclecio" target="_blank" rel="noopener" class="btn btn-ghost">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.84 3.14 8.95 7.5 10.4.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.05.66-3.7-1.3-3.7-1.3-.5-1.27-1.22-1.6-1.22-1.6-1-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.9.1-.71.38-1.2.7-1.47-2.44-.28-5-1.22-5-5.42 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.1-2.9 0 0 .93-.3 3.04 1.13a10.6 10.6 0 0 1 5.54 0c2.1-1.43 3.03-1.13 3.03-1.13.6 1.5.22 2.62.11 2.9.7.77 1.13 1.75 1.13 2.95 0 4.21-2.57 5.14-5.02 5.41.4.34.75 1 .75 2.03 0 1.47-.01 2.65-.01 3.01 0 .29.2.63.76.52 4.35-1.46 7.49-5.56 7.49-10.4C23.02 5.24 18.27.5 12 .5Z"/></svg>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/john-fideles/" target="_blank" rel="noopener" class="btn btn-ghost">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.11 20.45H3.56V9h3.55v11.45Z"/></svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-center">
+                        <div class="orbit orbit-1"></div>
+                        <div class="orbit orbit-2"></div>
+
+                        <div class="earth">
+                            <img src="/images/earth.png" alt="Terra">
+                        </div>
+                    </div>
+
+                    <div class="hero-right">
+                        <span>Construindo</span>
+                        <span>soluções digitais</span>
+                        <span>com código</span>
+                        <span>e criatividade</span>
+                    </div>
+                </div>
+
+                <a href="#sobre" class="scroll-cue" aria-label="rolar para baixo">
+                    <span class="scroll-dot"></span>
+                </a>
+            </section>
+
+            <!-- 02 · SOBRE -->
+            <section class="section" id="sobre">
+                <div class="section-index"><span>02</span><i class="tick"></i></div>
+
+                <div class="section-body about-grid">
+                    <div class="about-text">
+                        <h2>Sobre Mim <span class="dot-accent"></span></h2>
+                        <p>Sou estudante de Engenharia de Software e desenvolvedor apaixonado por criar soluções eficientes, modernas e escaláveis. Tenho experiência com desenvolvimento web, automação e integração de sistemas.</p>
+                        <p>Atualmente, foco em aprimorar minhas habilidades em tecnologias como Next.js, Python, Java e serviços em nuvem, sempre buscando aprender e compartilhar conhecimento.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon">&lt;/&gt;</div>
+                        <ul class="about-list">
+                            <li>Foco em desenvolvimento web</li>
+                            <li>Boas práticas e código limpo</li>
+                            <li>Apaixonado por tecnologia</li>
+                            <li>Sempre aprendendo</li>
+                        </ul>
+                        <div class="about-progress"><span></span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03 · TECNOLOGIAS -->
+            <section class="section" id="tecnologias">
+                <div class="section-index"><span>03</span><i class="tick"></i></div>
+
+                <div class="section-body">
+                    <h2>Tecnologias <span class="dot-accent"></span></h2>
+
+                    <div class="tech-grid">
+                        <div class="tech-card"><span class="tech-icon" style="color:#f89820">☕</span>Java</div>
+                        <div class="tech-card"><span class="tech-icon">▲</span>Next.js</div>
+                        <div class="tech-card"><span class="tech-icon" style="color:#61dafb">⚛</span>React</div>
+                        <div class="tech-card"><span class="tech-icon" style="color:#3776ab">🐍</span>Python</div>
+                        <div class="tech-card"><span class="tech-icon" style="color:#ff9900">☁</span>AWS</div>
+                        <div class="tech-card"><span class="tech-icon" style="color:#2496ed">🐳</span>Docker</div>
+                        <div class="tech-card"><span class="tech-icon" style="color:#f05032">⑂</span>Git</div>
+                        <div class="tech-card"><span class="tech-icon" style="color:#336791">🐘</span>PostgreSQL</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04 · PROJETOS -->
+            <section class="section" id="projetos">
+                <div class="section-index"><span>04</span><i class="tick"></i></div>
+
+                <div class="section-body">
+                    <div class="section-head">
+                        <h2>Projetos <span class="dot-accent"></span></h2>
+                        <a href="https://github.com/johnclecio?tab=repositories" target="_blank" class="link-arrow">Ver todos os projetos &rarr;</a>
+                    </div>
+
+                    <div class="project-grid">
+                        <article class="project-card">
+                            <div class="project-thumb thumb-1"></div>
+                            <h3>TopDestinos</h3>
+                            <p>Next.js + React + TypeScript = CSS Modules</p>
+                            <span class="tag tag-orange">rotas estáticas e dinâmicas,</span>
+                            <a href="https://github.com/johnclecio/listaDeTarefa/tree/main/TopDestinos" target="_blank" class="project-link">Ver Projeto <span>&rarr;</span></a>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-thumb thumb-2"></div>
+                            <h3>Blog Esportivo</h3>
+                            <p>Next.js + SEO + JSON</p>
+                            <span class="tag tag-green">Web</span>
+                            <a href="https://github.com/johnclecio/Next-Blog" target="_blank" class="project-link">Ver Projeto <span>&rarr;</span></a>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-thumb thumb-3"></div>
+                            <h3>CineLista</h3>
+                            <p>Catálogo de filmes</p>
+                            <span class="tag tag-purple">Web</span>
+                            <a href="https://github.com/johnclecio/Next-cinelista" target="_blank" class="project-link">Ver Projeto <span>&rarr;</span></a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 05 · CONTATO -->
+            <section class="section" id="contato">
+                <div class="section-index"><span>05</span><i class="tick"></i></div>
+
+                <div class="section-body">
+                    <h2>Contato <span class="dot-accent"></span></h2>
+                    <p class="contact-intro">Vamos conversar sobre projetos e oportunidades!</p>
+
+                    <div class="contact-grid">
+                        <a href="https://github.com/johnclecio" target="_blank" rel="noopener" class="contact-card">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.84 3.14 8.95 7.5 10.4.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.05.66-3.7-1.3-3.7-1.3-.5-1.27-1.22-1.6-1.22-1.6-1-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.9.1-.71.38-1.2.7-1.47-2.44-.28-5-1.22-5-5.42 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.1-2.9 0 0 .93-.3 3.04 1.13a10.6 10.6 0 0 1 5.54 0c2.1-1.43 3.03-1.13 3.03-1.13.6 1.5.22 2.62.11 2.9.7.77 1.13 1.75 1.13 2.95 0 4.21-2.57 5.14-5.02 5.41.4.34.75 1 .75 2.03 0 1.47-.01 2.65-.01 3.01 0 .29.2.63.76.52 4.35-1.46 7.49-5.56 7.49-10.4C23.02 5.24 18.27.5 12 .5Z"/></svg>
+                            <div><strong>GitHub</strong><span>/johnclecio</span></div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/john-fideles/" target="_blank" rel="noopener" class="contact-card">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.11 20.45H3.56V9h3.55v11.45Z"/></svg>
+                            <div><strong>LinkedIn</strong><span>/in/john-fideles/</span></div>
+                        </a>
+
+                        <a href="mailto:johnlima.dev@gmail.com" class="contact-card">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
+                            <div><strong>Email</strong><span>johncleciofl@gmail.com</span></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="logo"><span>&lt;/&gt;</span> John Lima</div>
+            <p class="text-footer">© 2026 Todos os direitos reservados.</p>
+            <button class="to-top" id="toTop" aria-label="voltar ao topo">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </button>
+        </footer>
+
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navbar.classList.toggle('open');
+            menuToggle.classList.toggle('active', isOpen);
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        navbar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('open');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
+        });
+
+        // back to top
+        document.getElementById('toTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // scroll-spy: highlight active nav link
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const spy = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: '-45% 0px -45% 0px' });
+
+        sections.forEach(section => spy.observe(section));
+    </script>
+
+</body>
+</html>
